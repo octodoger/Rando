@@ -31,7 +31,7 @@ if (cluster.isMaster) {
     require("randoDB").connect(config.db.url);
 
     app.use(serveStatic(__dirname + '/static', {maxAge: config.app.cacheControl}));
-    app.use(morgan("combined"));
+    app.use(morgan("combined"))
     app.use(bodyParser());
     app.use(multer({dest: '/tmp/'}));
 
