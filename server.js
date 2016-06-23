@@ -56,13 +56,13 @@ if (cluster.isMaster) {
         randoService.saveImage(user, filePath, location, function (err, response) {
             if (err) {
                 var response = Errors.toResponse(err);
-                logger.data("POST /image DONE with error: ", response.code);
-                res.status(response.status).send(response);
+                logger.data("POST /image DONE with error: ", response.code)
+                res.status(response.status).send(response)
                 return;
             }
 
             logger.data("POST /image DONE");
-            res.status(200).send(response);
+            res.status(200).send(response)
         });
     };
 
